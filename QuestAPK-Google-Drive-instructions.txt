@@ -1,0 +1,26 @@
+Google : canterbury.etd@gmail.com
+
+A publicly shared folder / files are required to push apks onto the Quests via HMS.
+
+When you share a file, make it public / anyone with the link (viewer)
+
+It will be similar to this;
+
+https://drive.google.com/file/d/1rFZMm4WpprTbazvSRkpVsz7w1hoYZ0S0/view?usp=sharing
+
+The random string in the middle is the file id.
+
+The link needs to be restructured as follows;
+
+https://drive.usercontent.google.com/download?id= file id number &export=download&authuser=0&confirm=t
+
+
+This should then allow HMS portal to access and scan the apk / obb file.
+When adding a apk resource file (obb file) you will need the filename and the link to the obb.
+The File name needs to be exactly as expected by the apk.
+This is either provided by the Dev, or noted when you pulled the file.
+
+
+
+
+

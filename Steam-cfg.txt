@@ -1,0 +1,23 @@
+
+Steam Config:
+------------
+
+Create file ~/.steam/steam/steam_dev.cfg
+
+# download speed
+@nClientDownloadEnableHTTP2PlatformLinux 0
+@fDownloadRateImprovementToAddAnotherConnection 1.0
+
+
+# shader pre-compile speed
+unShaderBackgroundProcessingThreads 8
+
+
+
+
+Asian Fonts in client
+
+sudo pacman -S noto-fonts-cjk
+Refesh cache : fc-cache -fv
+
+

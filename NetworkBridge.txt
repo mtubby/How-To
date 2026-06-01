@@ -1,0 +1,19 @@
+Setup the bridge
+$ nmcli connection add type bridge ifname br0 stp no
+
+add slave
+$ nmcli connection add type bridge-slave ifname enp62s0 master br0
+
+#check connections
+$ nmcli connection show --active
+
+down the eth0
+$ nmcli connection down "Ethernet connection 1"
+
+up the bridge
+$ nmcli connection up bridge-br0
+$ nmcli connection up bridge-slave-en62s0
+
+Setup the vm to use bridge br0
+
+

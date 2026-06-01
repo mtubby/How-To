@@ -1,0 +1,15 @@
+From history
+
+disable / Enable webcam
+Fn-F4
+
+sudo pacman -S cheese
+sudo pacman -S v4l-utils
+
+v4l2-ctl --list-devices
+xawtv -c /dev/video0
+
+yay -S mcontrolcenter-bin
+
+guvcview -d /dev/video0
+

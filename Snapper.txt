@@ -1,0 +1,45 @@
+Snapper Config
+-----------------
+
+Configs are stored in /etc/snapper/configs/
+ALLOW_USERS="matthew"
+matthew can use snapper config
+TIMELINE_LIMIT
+how many timeline snapshots to keep
+
+
+Snapper cleanup config trigger:
+/etc/cron.hourly/snapper
+
+
+
+List snapper configs:
+snapper list-configs
+
+
+List snap shots:
+sudo snapper -c configname list
+
+Compare to btrfs snapshots:
+sudo btrfs subvolume list -o /.snapshots/
+sudo btrfs subvolume list -o /home/.snapshots/
+
+
+Manual cleanup timeline:
+sudo snapper -c configname cleanup timeline
+
+Manual snapshot deletion:
+sudo snapper -c configname delete --sync id (id1-id2)
+
+
+Snapper Pacman hook:
+??????
+
+Snapper status between id and current 0
+snapper -c home status 204..0
+
+Set snapshot writable, to delete files: ??
+sudo btrfs property set /home/.snapshots/328/snapshot ro false
+
+
+

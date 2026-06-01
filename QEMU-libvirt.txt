@@ -1,0 +1,17 @@
+QEMU / libvirt / virt-manager
+-----------------------------
+
+
+Components ?
+qemu, virt-manager, libepoxy
+
+
+Start libvirt:
+sudo systemctl start libvirtd
+
+
+Convert virtual disk:
+sudo qemu-img convert -f qcow2 -O vdi -p /var/lib/libvirt/images/ubuntu25.10.qcow2 /home/matthew/Downloads/ubuntu25.10.vdi
+
+
+

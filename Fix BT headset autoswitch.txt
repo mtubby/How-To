@@ -1,0 +1,6 @@
+
+Helldivers 2 auto switches bluetooth headphones to Headset / Handsfree mode
+the below will prevent autoswitching, and keep defined profile
+
+
+$ wpctl settings --save bluetooth.autoswitch-to-headset-profile false

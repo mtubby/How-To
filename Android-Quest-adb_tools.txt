@@ -1,0 +1,72 @@
+
+Android Tools:
+---------------
+
+
+https://wiki.archlinux.org/title/Android_Debug_Bridge
+
+
+
+pacman -S android-tools
+pacman -S android-udev
+
+
+check for alternate distro packages
+
+----------------------------
+
+List USB Devices
+$ lsusb
+
+Inside Quest:
+Turn on Dev mode
+Turn on Android / USB debug
+When plugged in accept the Android Key authentication
+
+
+$ adb kill-server
+$ adb start-server
+
+
+$ adb devices
+If all ok then will show the quest device, if it says unauthenticated:
+Restart the servers as above, or check you have the correct android-udev settings, you may need to manually configure for quest2 devices.
+
+
+
+--------------------------------
+
+ADB commands to pull packages
+
+
+adb shell pm list packages
+
+adb shell pm path com.example.someappname
+
+adb pull /data/app/***???***/com.example.someappname-***???/base.apk path/to/desired/destination/app-name.apk
+
+
+------------------------------
+
+ADB commands to launch a package on headset
+
+adb shell dumpsys package | grep -i "package-name" | grep Activity
+
+adb shell am start -n com.package.name/com.package.name.ActivityName
+
+
+
+------------------
+
+Some apks are too large and require a obb resource file, find the location of the obb file.
+
+$ adb shell
+
+Search around the filesystem using example below, then exit the shell and pull the file as above.
+NB make not of the exact filename, as this is required/refered to by the apk/HMS management tool.
+
+/sdcard/Android/obb/com.oculus.FirstStepsHands/main.920500.com.oculus.FirstStepsHands.obb
+
+
+
+

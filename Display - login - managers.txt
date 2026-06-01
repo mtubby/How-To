@@ -1,0 +1,33 @@
+Problems with display manager (login manager) setting $XDG_SESSION_TYPE incorrectly.
+And other display manager login problems - ie. lightdm freezes at startup/login 
+
+-------------------
+
+plasma-login-manager (in development relies on systemd)
+https://archlinux.org/packages/extra/x86_64/plasma-login-manager/
+
+systemctl enable plasmalogin.service
+
+echo $XDG_SESSION_TYPE
+
+kcmshell6 --list
+
+config tool - but does not write config section for default Windows session
+kcmshell6 kcm_plasmalogin
+
+-----------
+
+Newer gdm display / login manager sets $XDG_SESSION_TYPE=wayland even if using x11
+
+/usr/share/xsessions
+/usr/share/wayland-sessions
+
+--------------
+
+lightdm sometimes freezes at startup so wont login
+Ctrl-Alt-BS resets DM
+
+----------------
+
+Also could look at sddm
+

@@ -1,0 +1,10 @@
+If electron applications are not running under X11, it might be they have defaulted to Wayland.
+
+check the --ozone-platform=x11 parameter.
+
+google-chrome-stable --ozone-platform=x11
+
+Check ozone defaults
+Check --ozone-platform=auto
+
+/usr/share/applications

@@ -1,0 +1,43 @@
+Install checkupdates package:
+-----------------------------
+
+$ sudo pacman -S pacman-contrib
+
+
+Update System:
+-------------
+
+$ checkupdates
+
+# Check news at http://archlinux.org
+
+$ sudo pacman -Syu
+
+
+Check AUR updates / installed :
+---------------------------------
+
+$ yay –Qu 
+$ pacman -Qm
+
+Update just AUR packages:
+--------------------------
+
+$ yay –Sua
+
+
+Check packages installed by user:
+-----------------------------------
+
+$ pacman –Qe 
+
+$ expac --timefmt='%Y-%m-%d %T' '%l\t%n\t\t%w' | grep 'explicit' | sort 
+
+$ expac --timefmt='%Y-%m-%d %T' '%l\t%n\t\t%w' | grep 'explicit' | sort | tail -n 15 | awk '{print $3}'
+
+
+Clean pacman cache: (clears all but last three)
+-------------------------------------------------
+
+$ paccache –r
+
