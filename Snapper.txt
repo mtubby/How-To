@@ -24,6 +24,11 @@ Compare to btrfs snapshots:
 sudo btrfs subvolume list -o /.snapshots/
 sudo btrfs subvolume list -o /home/.snapshots/
 
+Show size taken by snapshot folder
+sudo btrfs filesystem du -s /home/.snapshots*
+sudo btrfs filesystem du -s /.snapshots*
+
+
 
 Manual cleanup timeline:
 sudo snapper -c configname cleanup timeline
